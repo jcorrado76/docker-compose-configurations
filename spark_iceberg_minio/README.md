@@ -32,6 +32,22 @@ docker exec -it spark-iceberg notebook
 
 The `minio` container is configured to mount a local folder called `data` onto `/data`. After running `make up`, this folder will be created in your workspace.
 
+Then, I've added convenience scripts for running jobs.
+
+To run the example data, run:
+
+```bash
+make write-job
+```
+
+To read that data back, run:
+
+```bash
+make read-job
+```
+
+The Python files inside the `jobs` folder are mounted inside the spark container.
+
 ### Create a table
 
 You can create a table with the following command:
