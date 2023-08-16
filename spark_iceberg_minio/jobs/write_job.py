@@ -21,7 +21,7 @@ def main():
     (1, 1000374, 8.4, 42.13, "Y")
   ]
   df = spark.createDataFrame(data, schema)
-  df.writeTo("demo.nyc.taxis").mode("overwrite").create()
+  df.writeTo("demo.nyc.taxis").create()
 
 
 if __name__ == "__main__":
